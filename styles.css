@@ -333,7 +333,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   /* Adjust founder section */
   .founder-content {
     grid-template-columns: 1fr;
@@ -349,6 +349,10 @@ footer {
   .founder-image {
     margin: 0 auto 2rem;
   }
+  
+  .founder-image img {
+    max-width: 320px;
+  }
 
   /* Adjust podcast section */
   .youtube-embed iframe {
@@ -356,9 +360,40 @@ footer {
     height: auto;
     aspect-ratio: 16/9;
   }
+  
+  /* Adjust stats */
+  .founder-stats {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
+  /* Adjust hero section */
+  .hero h1 {
+    font-size: 2.2rem;
+    padding: 0 1rem;
+  }
+  
+  .hero p {
+    padding: 0 1rem;
+  }
+  
+  /* Adjust spacing */
+  section {
+    padding: 3rem 5%;
+  }
+  
+  /* Improve button touch targets */
+  .cta-button, 
+  .submit-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 576px) {
   /* Navigation */
   .hamburger {
     display: block;
@@ -424,17 +459,51 @@ footer {
 @media (max-width: 480px) {
   /* Typography */
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Hero section */
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  /* Founder section */
+  .founder-image img {
+    max-width: 280px;
+  }
+  
+  .founder-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .founder-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
-  /* Founder stats */
+  /* Stats */
   .founder-stats {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.6rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
   }
 
   /* Buttons */
@@ -442,11 +511,72 @@ footer {
   .submit-button {
     width: 100%;
     padding: 0.8rem;
+    font-size: 1rem;
   }
 
   /* Contact form */
   #contact-form input,
   #contact-form textarea {
     width: 100%;
+    font-size: 16px; /* Prevents zoom on focus in mobile */
+  }
+  
+  /* Navigation */
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .hamburger {
+    font-size: 1.3rem;
+  }
+  
+  /* Reviews */
+  .review-card {
+    padding: 1.2rem;
+  }
+  
+  .review-content p {
+    font-size: 0.95rem;
+  }
+  
+  /* Footer */
+  .footer-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Podcast section */
+  .podcast-content {
+    min-height: 300px;
+  }
+  
+  .youtube-embed iframe {
+    border-radius: 8px;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  .founder-image img {
+    max-width: 240px;
+  }
+  
+  .stat-number {
+    font-size: 1.4rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
   }
 }
